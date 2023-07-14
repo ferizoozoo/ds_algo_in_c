@@ -38,13 +38,13 @@ int main() {
     print_list(head); 
     printf("---------------------------\n");
 
-    head = remove_first(head);
+    remove_first(&head);
 
     print_list(head); 
     printf("---------------------------\n");
 
     int value3 = 40;
-    head = insert_first(value3, head);
+    insert_first(value3, &head);
 
     print_list(head); 
     printf("---------------------------\n");

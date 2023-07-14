@@ -20,15 +20,15 @@ void insert_last(int data, Node* head) {
     current->next = node;
 }
 
-Node* insert_first(int data, Node* head) {
-    if (head == NULL)
+void insert_first(int data, Node** head) {
+    if (*head == NULL)
         printf("There is no list specified.\n");
 
     Node* node = malloc(sizeof(Node));
     node->data = data;
-    node->next = head;
+    node->next = *head;
 
-    return node;
+    *head = node;
 }
 
 void remove_node(Node* node, Node* head) {
@@ -60,19 +60,18 @@ void remove_node(Node* node, Node* head) {
     free(node);
 }
 
-Node* remove_first(Node* head) {
-    if (head == NULL)
+void remove_first(Node** head) {
+    if (*head == NULL)
         printf("The list is empty.\n");
 
-    if (head->next == NULL) {
+    if ((*head)->next == NULL) {
         free(head);
         head = NULL;
     }
 
-    Node* current_head = head;
-    head = head->next;
+    Node* current_head = *head;
+    *head = (*head)->next;
     free(current_head);
-    return head;
 }
 
 void remove_last(Node* head) {

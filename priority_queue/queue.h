@@ -1,8 +1,8 @@
 #include "node.h"
 
 typedef struct {
-    int capacity;
-    int size;
+    int capacity = 0;
+    int size = 0;
     node* head;
 } queue;
 

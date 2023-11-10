@@ -71,7 +71,8 @@ array* remove_element(array* arr, int index) {
 }
 
 array* delete_array(array* arr) {
-    return NULL;
+    free(arr->list);
+    free(arr);
 }
 
 void print_array(array* arr) {

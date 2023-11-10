@@ -4,7 +4,7 @@ typedef struct {
     void** list;
 } array;
 
-array* initialize_array(int size);
+array* initialize_array(int capacity);
 array* insert_element(array* arr, void* data);
 array* remove_element(array* arr, int index);
 array* delete_array(array* arr);

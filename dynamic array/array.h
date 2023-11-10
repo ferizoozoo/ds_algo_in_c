@@ -1,6 +1,6 @@
 typedef struct {
-    int size = 0;
-    int capacity = 0;
+    int size;
+    int capacity;
     void* list;
 } array;
 
